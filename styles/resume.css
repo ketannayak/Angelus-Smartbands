@@ -1,0 +1,53 @@
+.resumebutton{
+	-webkit-writing-mode: horizontal-tb;
+	align-items: flex-start;
+	background-color: rgb(255, 255, 255);
+	border-bottom-color: rgb(221, 221, 221);
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-image-width: 1;
+	border-left-color: rgb(221, 221, 221);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: rgb(221, 221, 221);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: rgb(221, 221, 221);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	box-sizing: border-box;
+	color: rgb(68, 68, 68);
+	cursor: pointer;
+	display: inline-block;
+	font-family:'Open Sans', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	height: 44px;
+	line-height: 22px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 25px;
+	padding-bottom: 10px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 10px;
+	text-align: center;
+	text-indent: 0px;
+	text-shadow: none;
+	text-transform: none;
+	vertical-align: middle;
+	width: 300px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+}
+
+.resumebutton:hover{
+	color: #40b1e2;
+	background : #e6e6e6;
+	transition: color 0.5s;
+}

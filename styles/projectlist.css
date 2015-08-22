@@ -1,0 +1,101 @@
+.view {
+   width: 30%;
+   height: 16vw; /*use jquery here*/ 
+   margin: 10px 1% 10px 1%;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   cursor: default;
+   background-color: rgb(130,130,130);
+   display:inline-block;
+   /* margin: 0 auto; */
+   z-index:2;
+}
+
+.view h3{
+color: #fff;
+font-size:1.5vw;
+}
+
+.view hr{
+	border:none;
+	height:1px;
+	background-color:#fff;
+	margin-top: 5px;
+	margin-bottom:5px;
+	width:80%;
+}
+
+.view p{
+color:#fff;
+font-weight:300;
+line-height: 150%;
+font-size:1vw;
+}
+
+.view:hover{
+background-color:#40b1e2;
+transition: background-color 0.5s;
+}
+
+.view:hover i{
+color:#fff;
+transition: color 0.5s;
+}
+
+.projheadlinecontent{
+width:90%;
+padding-left:5%;
+padding-right:5%;
+position: absolute;
+top:50%;
+height:50%;
+margin-top:-25%;
+}
+
+.projexpander{
+text-align:right;
+width:90%;
+padding-left:5%;
+padding-right:5%;
+position: absolute;
+top:100%;
+height:10%;
+margin-top:-10%;
+}
+
+.view i {
+color:rgb(130,130,130);
+}
+
+
+.viewdetail {
+   width:62%;
+   height: 16vw; 
+   margin: 10px 1% 10px 1%;
+   overflow: hidden;
+   position: relative;
+   display:inline-block;
+   left:0;
+   z-index:1;
+}
+
+.viewdetail hr{
+	margin-top:0.5vw;
+	margin-bottom:1vw;
+	overflow:hidden;
+}
+
+.viewdetail p{
+font-weight:300;
+line-height: 150%;
+overflow:hidden;
+}
+
+.viewdetail h3{
+color:#40b1e2;
+margin-top: 1vw;
+margin-bottom:0.5vw;
+overflow:hidden;
+
+}

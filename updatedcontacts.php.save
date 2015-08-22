@@ -1,0 +1,147 @@
+<?php
+
+	include('sql.php'); 
+	
+	// sql to delete a record
+	//$sql = "DELETE FROM  coreUsers WHERE coreUsers WHERE coreID ='53ff69066667574820252067'";
+	//$connect->query($sql) ;
+
+
+	//sql to insert the records
+	//for($i =0; $i <= 5; $i++) {
+		
+		//if(${'name' . $i} != '' && ${'phonenumber' . $i} != ''){
+		$i=1;
+		$namethistime = $_POST['name' . $i];
+		$numberthistime =  $_POST['phonenumber' . $i];
+
+		$sqlinsert = "INSERT INTO coreUsers (coreId, nickname, phonenumber)  SELECT '53ff69066667574820252067', ' " . $namethistime .  "'," . $numberthistime ;
+
+	//	}
+
+	//} 
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+require('signin.php');
+
+?>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="/angelus/styles/main.css">
+	<link rel="stylesheet" href="/angelus/styles/css/font-awesome.min.css">
+	
+  </head>
+
+  <body>
+  
+    <div class="nav">
+      <div class="topmenucontainer">
+        <ul class="mainmenu">
+          <li>
+			<div class = "topmenuoption firstmenuoption">
+				<a href="/index.html">Angelus</a>
+			</div>
+	  </li>
+          <li>
+			<div class = "topmenuoption midmenuoption">
+				<a href="/about.html">About Us</a>
+			</div>
+   	  </li>
+	  <li>
+			<div class = "topmenuoption midmenuoption">
+				<a href="/store.html">Store</a>
+			</div>
+	  </li>
+	  <li>
+			<div class = "topmenuoption midmenuoption">
+				<a href="/signin.html">Sign In</a>
+			</div>
+	  </li>
+	</ul>
+      </div>
+    </div>
+
+	<div class = "aboutmesignin">
+			<center>
+				<img  class="angelhalo" src ="/angelus/images/angelhalo.png" />	
+				<p class = "subtitle"> Always there for you.</>
+			</center>
+			<hr>
+	</div>
+
+
+	<div class = "aboutme">
+	<h2>My current contacts</h2>
+
+	<form method="POST" action="updatecontacts.php" id = "form1">
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Phone number</th>
+		</tr>
+
+	<?php
+	$result =$connect->query("SELECT * FROM coreUsers WHERE coreID ='53ff69066667574820252067' ;");
+	
+	printf("You currently have  %d contacts listed for emergencies.\n",$result->num_rows);
+	
+	
+	while($row = $result->fetch_row()) {
+			echo "<tr><td><input type= 'text' name='name' value =  '" . $row[2] . "'></td><td><input type ='text' name='phonenumber'  value = '" . $row[1] . "'></td></tr>";
+	}
+	for($i = (5 - $result->num_rows); $i<=5 ; $i++) {
+		echo "<tr><td><input type='text' name ='name'></td><td><input type='text' name='phonenumber'></td></tr>";
+	} 
+
+	?>
+	</table>
+	</form>
+
+
+	<button type="submit" form = "form1" value="Submit">Update contacts</button>
+
+
+
+	</div>
+	<div class = "footer">
+		<div class = "container">
+				<div	 class = "linkstablecontainer">
+					<table class ="linkstable">
+						<tr>
+							<td><a href="https://www.facebook.com/nayak.ketan"><i class = "fa fa-facebook-square fa-lg"></i></a></td>
+							<td><a href="https://twitter.com/KetanNayak"><i class = "fa fa-twitter-square fa-lg"></i></a></td> 
+							<td><a href="javascript:void(0)"><i class = "fa fa-android fa-lg"></i></a></td>
+							<td><a href="javascript:void(0)"><i class = "fa fa-apple fa-lg"></i></a></td> 
+							<td><a href="javascript:void(0)"><i class = "fa fa-windows fa-lg"></i></a></td>
+						</tr>
+					</table>
+				</div>	
+				<center>
+				<p>
+					Copyright &copy Angelus 2015. All rights reserved
+				</p>
+			</center>
+		</div>
+	</div>	
+				
+  </body>
+</html>
